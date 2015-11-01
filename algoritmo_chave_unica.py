@@ -27,7 +27,8 @@ def cifrar(texto):
     for letra in texto:
         mtexto.append(letra)
         msg.append(alfa.index(letra))
-        mchave.append(random.randint(1,9))
+        mchave.append(random.randint(1,9))#Aqui crio uma chave aleatória baseada no tamho da mensagem
+
 
 
     #Realiza a multiplicação o vetor mensagem e a chave
