@@ -1,0 +1,32 @@
+#Programa para codificar de decodificar mensagens utilizando ROT13
+
+
+import codecs
+#global msg,msg_c,msg_d retirei pois estava dando conflito com as outras variáveis
+
+msgc=msgd=''
+msg= str(input("Digite a mensagem a ser cifrada: "))
+print("\nA mensagem foi atribuida a variável 'msg'. \nPara cifrar/decifrar basta chamar as funções:\n- cifrar(msg)\n- decifrar(msg)\n")
+original=msg
+
+def cifrar(msg):
+    global msgc
+    original = msg
+    msg = codecs.encode(msg, "rot13")
+
+    msgc  = msg
+    print("\nA mensagem cifrada é: \n",msgc)
+    
+
+
+def decifrar(msg):
+    global msgc,msgd
+    if msgc == msgd:
+        print("\nNão existe mensagem a ser decifrada.\n")
+    else:
+         msgd = codecs.decode(msgc, "rot13")
+         msg = msgd
+         print("\nA mensagem decifrada é: \n", msgd)
+
+
+    
